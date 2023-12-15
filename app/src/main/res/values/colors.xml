@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="seryi">#DAD9D9</color>
+    <color name="whitegrei">#FFF5EE</color>
+    <color name="greifon">#FFB28B</color>
+    <color name="whitered">#FF715E</color>
+    <color name="korichenui">#B15124</color>
+    <color name="red">#FF3B3B</color>
+</resources>

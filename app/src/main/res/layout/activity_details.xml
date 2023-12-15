@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DetailsActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/back_home"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/icon_arrow_left"
+                    android:padding="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/back_izbranoe"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="6dp"
+                    android:background="@drawable/icon_izbranoe"
+                    app:layout_constraintBottom_toBottomOf="@+id/back_home"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/back_home" />
+
+                <View
+                    android:id="@+id/menu_view"
+                    android:layout_width="0dp"
+                    android:layout_height="290dp"
+                    android:layout_margin="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/grey_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/back_home" />
+
+                <ImageView
+                    android:id="@+id/menu_food_image"
+                    android:layout_width="350dp"
+                    android:layout_height="250dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/menu_view"
+                    app:layout_constraintEnd_toEndOf="@+id/menu_view"
+                    app:layout_constraintStart_toStartOf="@+id/menu_view"
+                    app:layout_constraintTop_toTopOf="@+id/menu_view" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/menu_view">
+
+                    <TextView
+                        android:id="@+id/menu_food_opisanie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/brassmono"
+                        android:text="Борщ красный"
+                        android:textColor="@color/black"
+                        android:textSize="25dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                    <ImageView
+                        android:id="@+id/menu_food_image_clock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/icon_clock" />
+
+                    <TextView
+                        android:id="@+id/menu_food_image_clock_opisanie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:layout_weight="0"
+                        android:text="2 ЧАСА"
+                        android:textSize="17dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/menu_food_image_kcal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="0"
+                        android:background="@drawable/kcal" />
+
+                    <TextView
+                        android:id="@+id/menu_food_image_kcal_opsanie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="0"
+                        android:fontFamily="@font/brassmono"
+                        android:text="55.5kcall"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/menu_food_inregient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:text="Ингедиенты:" />
+
+            <TextView
+                android:id="@+id/menu_food_inregient_opisanie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/brassmono"
+                android:textColor="@color/black"
+                android:layout_margin="1dp"
+                android:text="\n*Говядина - 500 г
+\n*Свёкла - 1 шт.
+\n*Картофель - 2 шт.
+\n*Капуста белокочанная - 200 г
+\n*Морковь - 1 шт.
+\n*Лук репчатый - 1 шт.
+\n*Томатная паста - 1 ст. ложка
+\n*Масло растительное - 2 ст. ложки
+\n*Уксус - 1 ч. ложка
+\n*Лавровый лист - 1 шт.
+\n*Перец чёрный горошком - 2-3 шт.
+\n*Соль - 2 ч. ложки (по вкусу)
+\n*Вода - 1,5 л
+\n*Зелень укропа и/или петрушки (для подачи) - 3-4 веточки
+\n*Сметана (для подачи) - 2 ст. ложки" />
+
+            <TextView
+                android:id="@+id/menu_food_recept"
+                android:layout_width="match_parent"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Рецепт:" />
+
+            <TextView
+                android:id="@+id/menu_food_recept_opisanie"
+                android:layout_width="match_parent"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/brassmono"
+                android:text="1)Говядину нарезать крупными кусками.
+\n2)Залить мясо в кастрюле холодной водой, довести до кипения, снять пену. Варить бульон примерно 1,5 часа на небольшом огне.В конце варки посолить.
+\n3)Свёклу очистить, нарезать соломкой.Морковь очистить, натереть на крупной терке.Лук очистить, мелко нарезать.Капусту нашинковать.Картофель очистить, нарезать кубиками.
+\n4)На сковороде разогреть растительное масло. Свёклу, морковь и лук выложить на сковороду и тушить на среднем огне (пассеровать), помешивая, 5-7 минут.
+\n5)В конце добавить уксус и томатную пасту. Перемешать. Готовить овощи ещё 3-4 минуты, помешивая.
+\n6)В кипящий бульон выложить картофель и капусту, варить 10 минут. (Молодую капусту добавлять за 5 минут до окончания приготовления борща.)
+\n7)Затем добавить пассерованные овощи, лавровый лист и перец. Варить борщ с говядиной еще 5-7 минут.
+\n8)Готовому борщу дать настояться 10-15 минут." />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
